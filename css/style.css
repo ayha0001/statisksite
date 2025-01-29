@@ -141,17 +141,30 @@ footer {
 /* Fonte */
 h1 {
   font-family: nunito sans, sans-serif;
-  font-size: 2.9rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #272525;
 }
+h2 {
+  font-family: nunito sans, sans-serif;
+  font-size: 2rem;
+}
 h3 {
   font-family: nunito sans, sans-serif;
+}
+p {
+  font-family: roboto, sans-serif;
 }
 
 @media (min-width: 800px) {
   h1 {
     font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  p {
+    font-size: 1.4rem;
   }
 }
 
@@ -172,7 +185,7 @@ h3 {
   font-family: roboto, sans-serif;
   font-weight: 500;
   letter-spacing: 0.2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-decoration: none;
 }
 @media (min-width: 800px) {
@@ -209,4 +222,20 @@ h3 {
 .list ul a {
   text-decoration: underline;
   font-size: 1rem;
+}
+.productprice p {
+  margin: 1rem 0;
+}
+
+.product h3 {
+  font-size: 1.3rem;
+}
+
+.product ul {
+  list-style: none;
+}
+
+.productinfo p {
+  margin: 0.5rem 0 1.3rem;
+  font-size: 1.1rem;
 }

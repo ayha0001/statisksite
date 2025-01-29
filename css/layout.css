@@ -17,7 +17,7 @@
 .productlist {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 20px;
+  gap: 30px 20px;
 }
 
 @media (min-width: 800px) {
@@ -29,7 +29,7 @@
 @media (min-width: 1000px) {
   .productlist {
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px 25px;
+    gap: 30px 25px;
   }
 }
 .list {
@@ -39,8 +39,20 @@
   align-items: start;
 }
 
-.soldoutbox {
+.product {
   display: grid;
-  grid-template-columns: subgrid;
-  grid-row: span 2;
+}
+
+@media (min-width: 1000px) {
+  .product {
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .productimg {
+    grid-row: 1 / span2;
+  }
+  .productprice {
+    grid-column: 2 / span 2;
+  }
 }
