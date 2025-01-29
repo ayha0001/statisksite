@@ -21,11 +21,12 @@ main {
 }
 @media (min-width: 1030px) {
   main {
-    margin: 2.9rem auto;
+    margin: 2.9rem auto 8rem;
     max-width: 970px;
   }
 }
 
+/* Header og footer*/
 .headercontainer {
   display: flex;
   justify-content: space-between;
@@ -63,6 +64,16 @@ main {
 .headercontainer a:hover {
   text-decoration: underline;
   transition: 0.3 ease;
+}
+
+.footercontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footerlogo {
+  grid-column: 2;
+  width: 180px;
+  place-self: center;
 }
 
 /* Fonte */
