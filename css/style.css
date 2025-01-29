@@ -19,7 +19,7 @@ main {
     margin: 2.5rem 3.5rem;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1030px) {
   main {
     margin: 2.9rem auto;
     max-width: 970px;
