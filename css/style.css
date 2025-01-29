@@ -11,10 +11,30 @@ img {
   display: block;
 }
 
+main {
+  margin: 2rem 2.1rem;
+}
+@media (min-width: 700px) {
+  main {
+    margin: 2.5rem 3.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    margin: 2.9rem auto;
+    max-width: 970px;
+  }
+}
+
 .headercontainer {
   display: flex;
   justify-content: space-between;
-  padding: 1.7rem 2.4rem;
+  padding: 1.5rem 1.2rem;
+}
+@media (min-width: 700px) {
+  .headercontainer {
+    padding: 1.7rem 2.4rem;
+  }
 }
 
 .logo {
@@ -43,4 +63,43 @@ img {
 .headercontainer a:hover {
   text-decoration: underline;
   transition: 0.3 ease;
+}
+
+/* Fonte */
+h1 {
+  font-family: nunito sans, sans-serif;
+  font-size: 2.9rem;
+  font-weight: 800;
+  color: #272525;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Kategori bokse */
+.container {
+  margin: 1rem 0;
+}
+
+.box {
+  background-color: #ce2b28;
+  padding: 2rem 1.6rem;
+  border-radius: 16px;
+  box-shadow: 8px 10px 10px #aaa7a7;
+}
+
+.container a {
+  color: white;
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+@media (min-width: 800px) {
+  .container a {
+    font-size: 1.8rem;
+  }
 }
