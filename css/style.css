@@ -1,0 +1,46 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.7rem 2.4rem;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.headercontainer nav {
+  display: flex;
+  align-items: center;
+}
+
+.headercontainer ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.headercontainer a {
+  font-family: roboto, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #625d5d;
+}
+
+.headercontainer a:hover {
+  text-decoration: underline;
+  transition: 0.3 ease;
+}
