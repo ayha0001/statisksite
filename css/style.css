@@ -66,6 +66,10 @@ main {
   transition: 0.3 ease;
 }
 
+footer {
+  margin: 4rem 0 8rem;
+}
+
 .footercontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -76,6 +80,65 @@ main {
   place-self: center;
 }
 
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  transition: transform 0.3s ease;
+}
+
+.burger .line {
+  width: 30px;
+  height: 4px;
+  background-color: #ce2b28;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 800px) {
+  .menulinks {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 1.3rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .burger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .menulinks.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Fonte */
 h1 {
   font-family: nunito sans, sans-serif;
@@ -83,6 +146,10 @@ h1 {
   font-weight: 800;
   color: #272525;
 }
+h3 {
+  font-family: nunito sans, sans-serif;
+}
+
 @media (min-width: 800px) {
   h1 {
     font-size: 3.2rem;
@@ -113,4 +180,34 @@ h1 {
   .container a {
     font-size: 1.8rem;
   }
+}
+
+/* Produktliste*/
+.productlist {
+  margin: 2rem 0;
+}
+.list {
+  padding: 1rem;
+  background-color: #e6e5e5;
+  border-radius: 16px;
+  box-shadow: 3px 3px 10px #aaa7a7;
+}
+
+.list h3 {
+  font-size: 1.3rem;
+}
+.list a {
+  text-decoration: none;
+  color: #272525;
+}
+
+.list ul {
+  font-family: roboto, sans-serif;
+  list-style: none;
+  line-height: 1.8rem;
+}
+
+.list ul a {
+  text-decoration: underline;
+  font-size: 1rem;
 }

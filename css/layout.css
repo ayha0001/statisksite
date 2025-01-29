@@ -13,3 +13,28 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.productlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+}
+
+@media (min-width: 800px) {
+  .productlist {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+@media (min-width: 1000px) {
+  .productlist {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+}
+.list {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  align-items: start;
+}
