@@ -119,19 +119,18 @@ footer {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
     z-index: 100;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .burger {
     display: flex;
     cursor: pointer;
   }
-
   .menulinks.active {
     visibility: visible;
     opacity: 1;

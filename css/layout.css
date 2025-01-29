@@ -29,7 +29,7 @@
 @media (min-width: 1000px) {
   .productlist {
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 40px 25px;
   }
 }
 .list {
@@ -37,4 +37,10 @@
   grid-template-rows: subgrid;
   grid-row: span 3;
   align-items: start;
+}
+
+.soldoutbox {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 2;
 }
