@@ -1,9 +1,9 @@
 console.log("siden loades");
 
-let productId = 1578;
-let productContainer = document.querySelector(".productcontainer");
+const productId = 1578;
+const productContainer = document.querySelector(".productcontainer");
 
-fetch("https://kea-alt-del.dk/t7/api/products/${productId}")
+fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
@@ -18,11 +18,11 @@ fetch("https://kea-alt-del.dk/t7/api/products/${productId}")
           <ul>
             <li>
               <h3>Color</h3>
-              <p>${data.color}</p>
+              <p>${data.basecolour}</p>
             </li>
             <li>
               <h3>Brand</h3>
-              <p>${data.brand}</p>
+              <p>${data.brandname}</p>
             </li>
             <li>
               <h3>Occasion</h3>
