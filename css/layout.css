@@ -39,12 +39,12 @@
   align-items: start;
 }
 
-.product {
+.productcontainer {
   display: grid;
 }
 
 @media (min-width: 1000px) {
-  .product {
+  .productcontainer {
     gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
