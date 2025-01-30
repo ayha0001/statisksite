@@ -55,4 +55,8 @@
   .productprice {
     grid-column: 2 / span 2;
   }
+
+  .button {
+    place-self: end;
+  }
 }

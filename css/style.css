@@ -239,3 +239,23 @@ p {
   margin: 0.5rem 0 1.3rem;
   font-size: 1.1rem;
 }
+
+.button {
+  background-color: #ce2b28;
+  padding: 1.2rem 2.8rem;
+  border-radius: 18px;
+}
+
+.button a {
+  font-family: roboto, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.button a:hover {
+  text-decoration: none;
+  transform: scale(1.2);
+}
