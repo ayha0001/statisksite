@@ -1,7 +1,9 @@
+const cat = new URLSearchParams(window.location.search).get("category");
+document.querySelector("h1").innerHTML = cat;
 const productList = document.querySelector(".productlist");
 console.log(productList);
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=100`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${cat}`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
