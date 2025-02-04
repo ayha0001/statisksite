@@ -1,15 +1,16 @@
 console.log("siden loades");
 
-const productId = 1578;
-const productContainer = document.querySelector(".productcontainer");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const myProduct = urlParams.get("product");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
+fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`)
   .then((response) => response.json()) //then gør det til en json
   .then((data) => {
     //then show product
     productContainer.innerHTML = `
  <div class="productimg">
-          <img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="${data.productdisplayname}" />
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}" />
         </div>
         <div class="productprice">
           <h2>${data.productdisplayname}</h2>
