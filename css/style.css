@@ -266,3 +266,50 @@ p {
   text-decoration: none;
   transform: scale(1.2);
 }
+
+.soldout {
+  opacity: 60%;
+}
+
+.onsale {
+  background-color: #ce2b28;
+  padding: 0px 8px;
+  width: 50px;
+  visibility: hidden;
+  color: white;
+}
+
+.soldoutlabel {
+  background-color: grey;
+  padding: 0px 8px;
+  margin-top: 10px;
+  width: 70px;
+  visibility: hidden;
+  color: white;
+}
+
+.issoldout {
+  visibility: visible;
+}
+
+.productimg {
+  margin-right: 25px;
+}
+
+.productprice {
+  display: flex;
+  gap: 20px;
+}
+
+.onsale2 {
+  background-color: red;
+  padding: 0px 8px;
+  width: 58px;
+  height: 60px;
+  visibility: hidden;
+  color: white;
+}
+
+.isonsale {
+  visibility: visible;
+}

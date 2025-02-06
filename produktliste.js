@@ -1,8 +1,6 @@
 const myCat = new URLSearchParams(window.location.search).get("category");
 document.querySelector("h1").innerHTML = myCat;
 
-const myProduct = new URLSearchParams(window.location.search).get("id");
-
 const productList = document.querySelector(".productlist");
 console.log(productList);
 
@@ -15,18 +13,17 @@ function showList(data) {
   const markup = data
     .map(
       (element) => `
-    <div class='list'>
-      <a href='produkt.html?product=${element.product}'>
-        <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt='${product.productdisplayname}' />
+    <div class='list ${element.soldout && "soldout"}'>
+      <a  href="produkt.html?product=${element.id}">
+        <img class="productimg" src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt='${element.productdisplayname}' />
       </a>
-      <a href='produkt.html'>
-        <h3>${product.productdisplayname}</h3>
+      <a href="produkt.html?product=${element.id}">
+        <h3>${element.productdisplayname}</h3>
       </a>
       <ul>
-        <li>DKK ${product.price},-</li>
-        <li>
-          <a href='produkt.html'>Read More</a>
-        </li>
+        <li>DKK ${element.price},-</li>
+    <li class=" onsale ${element.discount && "isonsale"}">-${element.discount}%</li>
+<li class=" soldoutlabel ${element.soldout && "issoldout"}">Soldout</li>
       </ul>
     </div>
    `
